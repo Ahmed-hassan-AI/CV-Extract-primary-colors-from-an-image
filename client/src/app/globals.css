@@ -1,0 +1,61 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer components {
+   .primary-border{
+    @apply border-dashed border-2 border-green-500
+   }
+   .home{
+     @apply w-full min-h-screen p-4 flex flex-col gap-3 justify-center  items-center  
+   }
+   .text-bg{
+    @apply bg-clip-text text-transparent bg-gradient-to-r from-red-500 via-purple-500 to-orange-500 ;
+   }
+   .title{
+  
+     @apply text-3xl font-bold text-bg;
+   }
+
+   .content{
+     @apply relative w-full max-w-lg   space-y-3
+   }
+   .form{
+    @apply flex gap-2 flex-col justify-center items-center  
+   }
+   .img-frame{
+    @apply  w-full aspect-square primary-border overflow-hidden z-0
+   }
+   .img{
+     @apply w-full h-full object-cover object-center
+   }
+   .select-input{
+      @apply hidden
+   }
+  .select-input-label{
+      @apply absolute  p-3 primary-border cursor-pointer  z-20
+   }
+   .send-image-btn{
+    @apply self-end p-2 rounded-lg text-lg bg-green-500 text-white disabled:opacity-65
+   }
+   .colors-container{
+    @apply space-y-4
+   }
+   .index{
+    @apply font-bold text-green-500
+   }
+   .color-container{
+    @apply flex gap-3 items-center p-2
+   }
+   .color{
+     @apply w-fit bg-white flex gap-1 items-center rounded-full p-2 shadow-lg text-inherit
+   }
+
+}
+@layer base {
+ input,button{
+   border: none ;
+   outline: none;  
+ } 
+
+}
